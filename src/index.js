@@ -1,26 +1,21 @@
-// 引入相关的组件
-import Button from "./components/Button.vue"
+import Button from "../packages/button/index.js";
 
+const components = [Button];
 
-const components = [
-    Button,
-	//还可以再写别的组件
-    
-]
-var comObj = {};
-comObj.install = (Vue) => {
-	components.map(component => {
-		 Vue.component(components[key].name, components[key]) //注册组件  
-        comObj[components[key].name] = components[key];
-	})
+const install = function(Vue) {
+
+  components.forEach((component) => {
+    Vue.component(component.name, component);
+  });
+};
+
+/* istanbul ignore if */
+if (typeof window !== "undefined" && window.Vue) {
+  install(window.Vue);
 }
 
-/* 支持使用标签的方式引入 */
-if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
-}
-
-export default comObj //默认全局导出
-export {
-    Button   //     按需导出
-}
+export default {
+  version: "2.15.1",
+  install,
+  Button,
+};
