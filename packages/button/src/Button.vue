@@ -1,5 +1,5 @@
 <template>
-  <div v-preventReClick :class="[active && 'active', weaken && 'weaken' ]" class="hola-button" @click="btnClick">
+  <div v-preventReClick :class="[active && 'active', weaken && 'weaken' ]" class="kn_button" @click="btnClick">
     {{ text }}
   </div>
 </template>
@@ -45,8 +45,8 @@ export default {
   },
 }
 </script>
-<style lang="scss">
-.hola-button {
+<style lang="scss" scope>
+.kn_button {
   width: 100%;
   height: 48px;
   max-height: 100%;
