@@ -47,20 +47,19 @@ export default {
 </script>
 <style lang="scss">
 .hola-button {
-  // width: 622px;
   width: 100%;
-  height: 96px;
+  height: 48px;
   max-height: 100%;
-  border-radius: 48px;
+  border-radius: 24px;
   background: #d4d4d4;
-  font-size: 36px;
+  font-size: 18px;
   color: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
   &.active {
     background: #12B7F5;
   }
