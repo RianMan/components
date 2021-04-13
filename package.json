@@ -2,7 +2,7 @@
   "name": "kn_ui_components",
   "version": "0.1.0",
   "private": true,
-  "main": "src",
+  "main": "lib/knUi.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
