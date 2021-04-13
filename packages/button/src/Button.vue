@@ -1,5 +1,5 @@
 <template>
-  <div v-preventReClick :class="[active && 'active', weaken && 'weaken' ]" class="kn_button" @click="btnClick">
+  <div v-preventReClick :class="[active && 'active', weaken && 'weaken' ]" class="hola-button" @click="btnClick">
     {{ text }}
   </div>
 </template>
@@ -19,7 +19,7 @@
  * @event [click] 激活时点击触发
  */
 export default {
-  name: 'HolaButton',
+  name: 'KnButton',
   props: {
     active: {
       type: Boolean,
@@ -45,32 +45,39 @@ export default {
   },
 }
 </script>
-<style lang="scss" scope>
-.kn_button {
+<style lang="scss">
+.hola-button {
+  // width: 622px;
   width: 100%;
-  height: 48px;
+  height: 96px;
   max-height: 100%;
-  border-radius: 24px;
+  border-radius: 48px;
   background: #d4d4d4;
-  font-size: 18px;
+  background: var(--disabled);
+  font-size: 36px;
   color: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+
   &.active {
     background: #12B7F5;
+    background: var(--primary);
   }
 
   &.weaken {
     background: transparent;
     border: 1px solid #999;/*no*/
     color: #999;
+    border: 1px solid var(--tertiary);/*no*/
+    color: var(--tertiary);
   }
   &.active.weaken {
     border: 1px solid #12B7F5;
+    border: 1px solid var(--primary);
+    color: var(--primary);
   }
 }
 </style>
