@@ -49,12 +49,12 @@ export default {
 .hola-button {
   // width: 622px;
   width: 100%;
-  height: 96px;
+  height: 48PX;
   max-height: 100%;
-  border-radius: 48px;
+  border-radius: 24PX;
   background: #d4d4d4;
   background: var(--disabled);
-  font-size: 36px;
+  font-size: 18PX;
   color: #fff;
   margin: 0 auto;
   display: flex;
@@ -69,14 +69,14 @@ export default {
 
   &.weaken {
     background: transparent;
-    border: 1px solid #999;/*no*/
+    border: 1PX solid #999;/*no*/
     color: #999;
-    border: 1px solid var(--tertiary);/*no*/
+    border: 1PX solid var(--tertiary);/*no*/
     color: var(--tertiary);
   }
   &.active.weaken {
-    border: 1px solid #12B7F5;
-    border: 1px solid var(--primary);
+    border: 1PX solid #12B7F5;
+    border: 1PX solid var(--primary);
     color: var(--primary);
   }
 }
