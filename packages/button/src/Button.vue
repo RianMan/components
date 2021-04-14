@@ -1,5 +1,5 @@
 <template>
-  <div v-preventReClick :class="[active && 'active', weaken && 'weaken' ]" class="hola-button" @click="btnClick">
+  <div :class="[active && 'active', weaken && 'weaken' ]" class="hola-button" @click="btnClick">
     {{ text }}
   </div>
 </template>
@@ -47,21 +47,18 @@ export default {
 </script>
 <style lang="scss">
 .hola-button {
-  // width: 622px;
   width: 100%;
-  height: 48PX;
-  max-height: 100%;
+  padding: 30px 68px;
   border-radius: 24PX;
   background: #d4d4d4;
   background: var(--disabled);
-  font-size: 18PX;
+  font-size: 18px;
   color: #fff;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
   &.active {
     background: #12B7F5;
     background: var(--primary);
